@@ -1,0 +1,29 @@
+@import '~antd/dist/antd.css';
+
+.App {
+    width:1100px;
+}
+
+.transactions {
+    padding: 10px;
+}
+
+.transaction-item {
+    background: #fff;
+}
+
+.accounts {
+    display: flex;
+    padding:10px;
+    justify-content: space-between;
+}
+
+.accounts-card {
+    width: 190px;
+    border-radius: 10px;
+    margin-right:10px;
+}
+
+.addForm {
+    padding: 10px;
+}

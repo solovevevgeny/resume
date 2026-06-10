@@ -21,6 +21,7 @@
   - Alertmanager
 ### Reverse proxy:
   - nginx
+    - [Nginx as Load balancer (PHP FPM on Instances)](https://github.com/solovevevgeny/resume/tree/main/Proxy/nginx/load_balancer)
 ### DBA:
   - MsSQL
   - MySQL

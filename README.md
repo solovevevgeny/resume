@@ -4,7 +4,8 @@
 
 #### Infra
   - Terraform
-  - Ansible
+  - **Ansible**
+    - [ngnix + PHP + MySQL](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/lemp)
 ### CI/CD
   - Gitlab
   - ArgoCD

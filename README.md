@@ -11,7 +11,8 @@
   - ArgoCD
 ### Containers:
   - Docker/Docker compose
-  - kubernetes
+  - kubernetes 
+    - [Deployment + configmap (nginx + python)](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/deployment)
 ### Monitoring:
   - Grafana
   - Loki

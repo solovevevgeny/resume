@@ -11,7 +11,7 @@
   - ArgoCD
 ### Containers:
   - Docker/Docker compose
-  - Kubernates
+  - kubernetes
 ### Monitoring:
   - Grafana
   - Loki

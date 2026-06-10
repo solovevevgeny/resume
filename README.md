@@ -13,6 +13,8 @@
   - Docker/Docker compose
   - kubernetes 
     - [Deployment + configmap (nginx + python)](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/deployment)
+    - [Stateful DB Edition](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/StatefulSet)
+   
 ### Monitoring:
   - Grafana
   - Loki

@@ -1,0 +1,101 @@
+---
+- hosts: "all"
+  become: true
+  tasks:
+
+    # INSTALLING NGINX 
+
+    - name: "installing nginx apt"
+      ansible.builtin.apt:
+        name: "nginx"
+        state: "latest"
+        update_cache: true
+
+    - name: "delete /var/www/html folder"
+      ansible.builtin.file:
+        path: "/var/www/html"
+        state: "absent"
+
+    - name: "copy index.html to /var/www/html"
+      ansible.builtin.copy:
+        src: "~/index.html"
+        dest: "/var/www/html/"
+        owner: "root"
+        group: "root"
+        mode: "0644"
+
+
+    # INSTALLING MYSQL
+    - name: "Installing MySQL"
+      ansible.builtin.apt:
+        name: "mysql-server"
+        state: "latest"
+        update_cache: true
+
+    - name: "install pymysql"
+      ansible.builtin.apt:
+        name: "python3-pymysql"
+        state: "latest"
+        update_cache: true
+
+    - name: "setup root user for mysql"
+      community.mysql.mysql_user:
+        login_unix_socket: "/var/run/mysqld/mysqld.sock"
+        name: "root"
+        password: "password"
+        login_user: "root"
+        login_password: "password"
+        check_implicit_admin: true
+
+    - name: "delete anon users"
+      community.mysql.mysql_user:
+        name: ""
+        login_user: "root"
+        login_password: "password"
+        state: "absent"
+
+
+    - name: "delete anon DB"
+      community.mysql.mysql_db:
+        name: "test"
+        login_user: "root"
+        login_password: "password"
+        state: "absent"
+
+
+   # INSTALL PHP-FPM
+    - name: "installing php fpm and php-mysql"
+      ansible.builtin.apt:
+        name: "{{ item }}"
+        state: "latest"
+        update_cache: true
+      with_items:
+        - "php8.3-fpm"
+        - "php-mysql"
+
+    - name: "copy index.php to /var/www/html"
+      ansible.builtin.copy:
+        src: "~/index.php"
+        dest: "/var/www/html/"
+        owner: "root"
+        group: "root"
+        mode: "0644"
+
+    - name: "delete /etc/nginx/sites-available/default"
+      ansible.builtin.file:
+        path: "/etc/nginx/sites-available/default"
+        state: "absent"
+
+
+    - name: "copy config nginx"
+      ansible.builtin.copy:
+        src: "~/nginx.conf"
+        dest: "/etc/nginx/sites-available/default"
+        owner: "root"
+        group: "root"
+        mode: "0644"
+
+    - name: "reload nginx"
+      ansible.builtin.service:
+        name: "nginx"
+        state: "reloaded"

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: strada-checker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: strada-checker
+  template:
+    metadata:
+      labels:
+        app: strada-checker
+    spec:
+      containers:
+        - name: strada-checker
+          image: solovevevgeny/checker:1
+          ports:
+          - containerPort: 80

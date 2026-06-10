@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: strada-checker
+  labels:
+    app: strada-checker
+spec:
+  ports:
+  - port: 8080
+    targetPort: 80
+  selector:
+    app: strada-checker
+  type: ClusterIP

@@ -33,3 +33,4 @@
   - HTML
   - CSS
   - ReactJS + Redux
+    - [Rest Countries (RestAPI Request + Fetch + Filter)](https://github.com/solovevevgeny/resume/tree/main/Frontend/ReactJS/ReactJS_Redux/restcountries)

@@ -1,0 +1,43 @@
+stages: 
+  - tests
+  - build
+  - release
+
+FastApi tests:
+  stage: tests
+  image: python:3
+  script: 
+    - pip install -r requirements.txt
+    - pytest
+
+
+Docker build:
+  stage: build
+  image: docker:stable
+  services:
+    - docker:dind
+  script:
+    #- docker login -u gitlab-ci-token -p {CI_JOB_TOKEN} ${CI_REGISTRY}
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+    - docker build -t $CI_REGISTRY/$CI_PROJECT_PATH/$CI_PROJECT_NAME:$CI_COMMIT_REF_SLUG .
+    - docker push $CI_REGISTRY/$CI_PROJECT_PATH/$CI_PROJECT_NAME:$CI_COMMIT_REF_SLUG
+
+
+Release:
+  stage: release
+  image: docker:stable
+  services:
+    - docker:dind
+  script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+    - docker pull $CI_REGISTRY/$CI_PROJECT_PATH/$CI_PROJECT_NAME:$CI_COMMIT_REF_SLUG
+
+    - docker tag $CI_REGISTRY/$CI_PROJECT_PATH/$CI_PROJECT_NAME:$CI_COMMIT_REF_SLUG $CI_REGISTRY/$CI_PROJECT_PATH/$CI_PROJECT_NAME:latest
+    - docker push $CI_REGISTRY/$CI_PROJECT_PATH/$CI_PROJECT_NAME:latest
+
+
+
+
+
+
+

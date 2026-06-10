@@ -7,7 +7,7 @@
   - **Ansible**
     - [ngnix + PHP + MySQL](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/lemp)
 ### CI/CD
-  - Gitlab
+  - [Gitlab](https://github.com/solovevevgeny/resume/tree/main/CICD/Gitlab/gitlab-ci)
   - ArgoCD
 ### Containers:
   - Docker/Docker compose

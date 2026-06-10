@@ -9,6 +9,8 @@
 ### CI/CD
   - [Gitlab](https://github.com/solovevevgeny/resume/tree/main/CICD/Gitlab/gitlab-ci)
   - ArgoCD
+  - Helm
+  
 ### Containers:
   - Docker/Docker compose
   - kubernetes 

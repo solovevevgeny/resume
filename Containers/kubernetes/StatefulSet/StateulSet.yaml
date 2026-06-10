@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: web-nginx-st
+  labels:
+    app: web-nginx-st
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-nginx-st
+  template:
+    metadata:
+      labels:
+        app: web-nginx-st
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+          name: web
+        volumeMounts:
+        - name: www
+          mountPath: /var/www/html
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+      labels:
+        app: web-nginx-st
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: "standard"
+      resources:
+        requests:
+          storage: 100Mi

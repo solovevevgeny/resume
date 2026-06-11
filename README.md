@@ -10,6 +10,7 @@
   - [Gitlab](https://github.com/solovevevgeny/resume/tree/main/CICD/Gitlab/gitlab-ci)
   - ArgoCD
   - Helm
+    - [standart](https://github.com/solovevevgeny/resume/tree/main/CICD/Helm)
   
 ### Containers:
   - Docker/Docker compose

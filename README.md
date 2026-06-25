@@ -7,13 +7,14 @@
   - **Ansible**
     - [ngnix + PHP + MySQL](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/lemp)
 ### CI/CD
-  - [Gitlab](https://github.com/solovevevgeny/resume/tree/main/CICD/Gitlab/gitlab-ci)
   - [ArgoCD](https://gitlab.com/evgeny.solovev/running-club-app)
+    ArgoCD / Gitlab pipeline (build-test-image) / Helm charts / Kubernetes 
   - Helm
     - [standart](https://github.com/solovevevgeny/resume/tree/main/CICD/Helm)
     - [running-club-app](https://gitlab.com/evgeny.solovev/running-club-app)
+    - [Gitlab](https://github.com/solovevevgeny/resume/tree/main/CICD/Gitlab/gitlab-ci)
 ### Containers:
-  - Docker/Docker compose
+  - [Docker/Docker compose](https://gitlab.com/evgeny.solovev/mlops-project)
   - kubernetes 
     - [Deployment + configmap (nginx + python)](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/deployment)
     - [Stateful DB Edition](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/StatefulSet)

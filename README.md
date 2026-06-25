@@ -8,15 +8,21 @@
     - [ngnix + PHP + MySQL](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/lemp)
 ### CI/CD
   - [Gitlab](https://github.com/solovevevgeny/resume/tree/main/CICD/Gitlab/gitlab-ci)
-  - ArgoCD
+  - [ArgoCD](https://gitlab.com/evgeny.solovev/running-club-app)
   - Helm
     - [standart](https://github.com/solovevevgeny/resume/tree/main/CICD/Helm)
-  
+    - [running-club-app](https://gitlab.com/evgeny.solovev/running-club-app)
 ### Containers:
   - Docker/Docker compose
   - kubernetes 
     - [Deployment + configmap (nginx + python)](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/deployment)
     - [Stateful DB Edition](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/StatefulSet)
+
+### MLOps
+  - [Apache Airflow](https://gitlab.com/evgeny.solovev/mlops-project) Docker compose (Airflow, DAGs, Postgresql, Redis)
+    monitoring (Grafana, Prometeus, Loki, Promtail)
+    statsd-exporter
+     
    
 ### Monitoring:
   - Grafana

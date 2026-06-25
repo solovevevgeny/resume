@@ -14,8 +14,10 @@
     - [running-club-app](https://gitlab.com/evgeny.solovev/running-club-app)
     - [Gitlab](https://github.com/solovevevgeny/resume/tree/main/CICD/Gitlab/gitlab-ci)
 ### Containers:
-  - [Docker/Docker compose](https://gitlab.com/evgeny.solovev/mlops-project)
-  - kubernetes 
+  - [Docker](https://gitlab.com/evgeny.solovev/mlops-project)
+    Docker / Docker Compose
+  - kubernetes
+    - [ArcoCD-Heml-GitlabPipeline-K8S](https://gitlab.com/evgeny.solovev/running-club-app)
     - [Deployment + configmap (nginx + python)](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/deployment)
     - [Stateful DB Edition](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/StatefulSet)
 

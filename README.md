@@ -21,6 +21,9 @@
     - [Deployment + configmap (nginx + python)](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/deployment)
     - [Stateful DB Edition](https://github.com/solovevevgeny/resume/tree/main/Containers/kubernetes/StatefulSet)
 
+### DevOpsSec
+  - [Python: FastAPI scan SAST in pipeline (Bandit)](https://gitlab.com/evgeny.solovev/devsecops)
+
 ### MLOps
   - [Apache Airflow](https://gitlab.com/evgeny.solovev/mlops-project) Docker compose (Airflow, DAGs, Postgresql, Redis)
     monitoring (Grafana, Prometeus, Loki, Promtail)

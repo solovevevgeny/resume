@@ -5,6 +5,7 @@
 #### Infastructure as Code (IaC)
   - Terraform
   - **Ansible**
+    - Vault for secrets
     - Gitlab Runners for run playbooks
     - Ansible optimizing:
       - Async (name: Run an async task)

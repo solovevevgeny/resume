@@ -8,6 +8,7 @@
     - Ansible optimizing:
       - Async (name: Run an async task)
       - Strategy
+        - Mitogen
         - Free
         - Host pinned
         - linear

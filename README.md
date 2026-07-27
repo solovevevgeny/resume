@@ -5,6 +5,7 @@
 #### Infastructure as Code (IaC)
   - Terraform
   - **Ansible**
+    - Gitlab Runners for run playbooks
     - Ansible optimizing:
       - Async (name: Run an async task)
       - Strategy (Mitogen/Free/Host pinned/linear)

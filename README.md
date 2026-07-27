@@ -7,11 +7,7 @@
   - **Ansible**
     - Ansible optimizing:
       - Async (name: Run an async task)
-      - Strategy
-        - Mitogen
-        - Free
-        - Host pinned
-        - linear
+      - Strategy (Mitogen/Free/Host pinned/linear)
       - Threads (forks)
       - Multiplexing (issh_args = -0 ControlMaster=auto -0 ControlPersist=60s)
       - Limits Facts about hosts (All/Min/Hardware/Newtork/Virtual/)

@@ -17,7 +17,7 @@
     - [role POSTGRES/make migration/check migration_Result(Rollback)](https://gitlab.com/evgeny.solovev/ansible/-/tree/main/13%20postrges_migration)
     - [ngnix + PHP + MySQL](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/lemp)
     - [Postgres + Replica]
-    
+
 ### CI/CD
   - [ArgoCD](https://gitlab.com/evgeny.solovev/running-club-app)
     ArgoCD / Gitlab pipeline (build-test-image) / Helm charts / Kubernetes 
@@ -25,6 +25,14 @@
     - [standart](https://github.com/solovevevgeny/resume/tree/main/CICD/Helm)
     - [running-club-app](https://gitlab.com/evgeny.solovev/running-club-app)
     - [Gitlab](https://github.com/solovevevgeny/resume/tree/main/CICD/Gitlab/gitlab-ci)
+
+### Bash
+  - [Check disk space](https://github.com/solovevevgeny/resume/blob/main/bash_scripts/check_df.sh)
+  - [Deploy](https://github.com/solovevevgeny/resume/blob/main/bash_scripts/deploy.sh)
+  - [PostgreSQL Backup](https://github.com/solovevevgeny/resume/blob/main/bash_scripts/postgres_backup.sh)
+  - [Docker cleanup](https://github.com/solovevevgeny/resume/blob/main/bash_scripts/docker_cleanup.sh)
+  - [Logs rotation](https://github.com/solovevevgeny/resume/blob/main/bash_scripts/rotation_logs.sh)
+
 ### Containers:
   - [Docker](https://gitlab.com/evgeny.solovev/mlops-project)
     Docker / Docker Compose

@@ -5,6 +5,7 @@
 #### Infra
   - Terraform
   - **Ansible**
+    - [role POSTGRES/make migration/check migration_Result(Rollback)](https://gitlab.com/evgeny.solovev/ansible/-/tree/main/13%20postrges_migration)
     - [ngnix + PHP + MySQL](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/lemp)
 ### CI/CD
   - [ArgoCD](https://gitlab.com/evgeny.solovev/running-club-app)

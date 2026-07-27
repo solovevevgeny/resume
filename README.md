@@ -15,10 +15,11 @@
       - Threads (forks)
       - Multiplexing (issh_args = -0 ControlMaster=auto -0 ControlPersist=60s)
       - Limits Facs about hosts (All/Min/Hardware/Newtork/Virtual/)
+      - Perfomance monitoring with Callbacks (Times, Profile_Roles)
     - [role POSTGRES/make migration/check migration_Result(Rollback)](https://gitlab.com/evgeny.solovev/ansible/-/tree/main/13%20postrges_migration)
     - [ngnix + PHP + MySQL](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/lemp)
     - [Postgres + Replica]
-    - Perfomance monitoring with Callbacks (Times, Profile_Roles)
+    
 ### CI/CD
   - [ArgoCD](https://gitlab.com/evgeny.solovev/running-club-app)
     ArgoCD / Gitlab pipeline (build-test-image) / Helm charts / Kubernetes 

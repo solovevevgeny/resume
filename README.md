@@ -2,7 +2,7 @@
 
 ## DevOps
 
-#### Infra
+#### Infastructure as Code (IaC)
   - Terraform
   - **Ansible**
     - [role POSTGRES/make migration/check migration_Result(Rollback)](https://gitlab.com/evgeny.solovev/ansible/-/tree/main/13%20postrges_migration)

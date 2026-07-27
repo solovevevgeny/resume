@@ -34,7 +34,7 @@
 ### Monitoring:
   - [Grafana](https://gitlab.com/evgeny.solovev/mlops-project)
   - [Loki](https://gitlab.com/evgeny.solovev/mlops-project)
-  - [Prometeus]](https://gitlab.com/evgeny.solovev/mlops-project)
+  - [Prometeus](https://gitlab.com/evgeny.solovev/mlops-project)
   - [Promtail](https://gitlab.com/evgeny.solovev/mlops-project)
   - Alertmanager
 ### Reverse proxy:

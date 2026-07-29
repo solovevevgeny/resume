@@ -33,6 +33,18 @@
   - [Docker cleanup](https://github.com/solovevevgeny/resume/blob/main/bash_scripts/docker_cleanup.sh)
   - [Logs rotation](https://github.com/solovevevgeny/resume/blob/main/bash_scripts/rotation_logs.sh)
 
+### [Python devops](https://github.com/solovevevgeny/resume/tree/main/bash_scripts) 
+  - Check ports
+  - Check process
+  - k8s_OOMKilled_list
+  - k8s_pod_restart_resons
+  - kill_cpu_oberhead
+  - old_files_delete
+  - pg_backup
+  - restarts_services
+  - systemctl_status
+  - telegram_message
+
 ### Containers:
   - [Docker](https://gitlab.com/evgeny.solovev/mlops-project)
     Docker / Docker Compose

@@ -41,6 +41,11 @@
   - kill_cpu_oberhead
   - old_files_delete
   - pg_backup
+  - pg_check_locks
+  - pg_connctions_count
+  - pg_isready
+  - pg_slow_requests
+  - pg_user_create
   - restarts_services
   - systemctl_status
   - telegram_message

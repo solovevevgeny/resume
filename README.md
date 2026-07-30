@@ -49,6 +49,7 @@
   - restarts_services
   - systemctl_status
   - telegram_message
+  - awk '{print $1}' /home/admin/access.log | sort | uniq -c | sort -nr | head -1 | awk '{print $2}' > /home/highestip.txt
 
 ### Containers:
   - [Docker](https://gitlab.com/evgeny.solovev/mlops-project)

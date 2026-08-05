@@ -18,6 +18,7 @@
     - [ngnix + PHP + MySQL](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/lemp)
     - [Postgres + Replica]
     - [Grafana](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/Grafana)
+    - [LEMP(Roles)](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/Lemp-roles)
 
 ### CI/CD
   - [ArgoCD](https://gitlab.com/evgeny.solovev/running-club-app)

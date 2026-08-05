@@ -1,0 +1,68 @@
+---
+- name: Install Grafana
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Install required dependencies on Ubuntu
+      apt:
+        name:
+          - adduser
+          - libfontconfig1
+          - musl
+        state: present
+      when: ansible_facts["os_family"] == "Debian"
+
+    - name: Download Grafana .deb package
+      get_url:
+        url: https://dl.grafana.com/oss/release/grafana_12.0.0_amd64.deb
+        dest: /tmp/grafana_12.0.0_amd64.deb
+        mode: "0644"
+      when: ansible_facts["os_family"] == "Debian"
+
+    - name: Install Grafana on Ubuntu
+      apt:
+        deb: /tmp/grafana_12.0.0_amd64.deb
+        state: present
+      when: ansible_facts["os_family"] == "Debian"
+
+    - name: Clean up downloaded package
+      file:
+        path: /tmp/grafana_12.0.0_amd64.deb
+        state: absent
+      when: ansible_facts["os_family"] == "Debian"
+
+    - name: Install Grafana on AlmaLinux
+      ansible.builtin.shell:
+        cmd: "yum install -y https://dl.grafana.com/oss/release/grafana-12.0.0-1.x86_64.rpm --nogpgcheck" 
+      when: ansible_facts["os_family"] == "RedHat"
+
+    - name: Ensure Grafana is enabled and started
+      systemd:
+        name: grafana-server
+        enabled: true
+        state: started
+
+    - name: Configure Grafana to use port 9100
+      lineinfile:
+        path: /etc/grafana/grafana.ini
+        regexp: '^;http_port = 3000'
+        line: 'http_port = 9100'
+        backrefs: true
+      notify: restart grafana
+
+    - name: "Firewall rules (open 9100)"
+      ansible.builtin.shell:
+        cmd: "firewall-cmd --permanent --add-port=9100/tcp"
+      when: ansible_facts["os_family"] == "RedHat"
+
+    - name: "Firewall rules (reload)"
+      ansible.builtin.shell:
+        cmd: "firewall-cmd --reload"
+      when: ansible_facts["os_family"] == "RedHat"
+
+  handlers:
+    - name: restart grafana
+      systemd:
+        name: grafana-server
+        state: restarted

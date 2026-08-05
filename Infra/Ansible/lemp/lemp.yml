@@ -30,13 +30,11 @@
       ansible.builtin.apt:
         name: "mysql-server"
         state: "latest"
-        update_cache: true
 
     - name: "install pymysql"
       ansible.builtin.apt:
         name: "python3-pymysql"
         state: "latest"
-        update_cache: true
 
     - name: "setup root user for mysql"
       community.mysql.mysql_user:
@@ -68,7 +66,6 @@
       ansible.builtin.apt:
         name: "{{ item }}"
         state: "latest"
-        update_cache: true
       with_items:
         - "php8.3-fpm"
         - "php-mysql"

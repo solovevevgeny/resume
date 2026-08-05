@@ -14,6 +14,7 @@
       - Multiplexing (issh_args = -0 ControlMaster=auto -0 ControlPersist=60s)
       - Limits Facts about hosts (All/Min/Hardware/Newtork/Virtual/)
       - Perfomance monitoring with Callbacks (Times, Profile_Roles)
+    - [Postgres migrations](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/postresql_migrations)
     - [Docker save image to archive, transfer and import in repo](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/docker_save_image)
     - [role POSTGRES/make migration/check migration_Result(Rollback)](https://gitlab.com/evgeny.solovev/ansible/-/tree/main/13%20postrges_migration)
     - [ngnix + PHP + MySQL](https://github.com/solovevevgeny/resume/tree/main/Infra/Ansible/lemp)

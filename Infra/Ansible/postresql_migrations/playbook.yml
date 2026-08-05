@@ -1,0 +1,33 @@
+- hosts: postgresql
+  become: true
+  become_method: sudo
+  become_user: postgres
+  vars:
+    db_name: namesdb
+
+  roles:
+    - role: geerlingguy.postgresql
+
+  tasks:
+    - name: Create DB
+      become: true
+      community.postgresql.postgresql_db:
+        name: namesdb
+        state: present
+
+
+    # - name: Copy migration file
+    #   ansible.builtin.copy:
+    #     src: files/migration.sql
+    #     dest: /tmp/migrations.sql
+    #     owner: postgres
+    #     group: postgres
+    #     mode: '0644'
+
+
+    # - name: Run migrations
+    #   become: true
+    #   become_user: postgres
+    #   community.postgresql.postgresql_script:
+    #     db: namesdb
+    #     path: /tmp/migrations.sql

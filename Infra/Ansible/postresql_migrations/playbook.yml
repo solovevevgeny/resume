@@ -16,18 +16,18 @@
         state: present
 
 
-    # - name: Copy migration file
-    #   ansible.builtin.copy:
-    #     src: files/migration.sql
-    #     dest: /tmp/migrations.sql
-    #     owner: postgres
-    #     group: postgres
-    #     mode: '0644'
+    - name: Copy migration file
+      ansible.builtin.copy:
+        src: files/migration.sql
+        dest: /tmp/migrations.sql
+        owner: postgres
+        group: postgres
+        mode: '0644'
 
 
-    # - name: Run migrations
-    #   become: true
-    #   become_user: postgres
-    #   community.postgresql.postgresql_script:
-    #     db: namesdb
-    #     path: /tmp/migrations.sql
+    - name: Run migrations
+      become: true
+      become_user: postgres
+      community.postgresql.postgresql_script:
+        db: namesdb
+        path: /tmp/migrations.sql

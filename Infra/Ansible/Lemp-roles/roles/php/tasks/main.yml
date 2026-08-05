@@ -1,0 +1,24 @@
+# installing PHP-fpm
+
+  - name: "installing php-fpm"
+    ansible.builtin.apt:
+      name: "{{ item }}"
+      state: "latest"
+      update_cache: true
+    with_items:
+      - "php-fpm"
+      - "php-mysql"
+
+  - name: "Copy test php files"
+    ansible.builtin.copy:
+      src: "files/php_test"
+      dest: "/var/www/"
+      owner: "solovev"
+      group: "solovev"
+      mode: "0644"
+
+  - name: "link"
+    ansible.builtin.file:
+      src: "/etc/nginx/sites-available/php-test.conf"
+      dest: "/etc/nginx/sites-enabled/php-test.conf"
+      state: "link"

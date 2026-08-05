@@ -1,0 +1,28 @@
+# installing nginx 
+
+- name: "Installing nginx"
+  ansible.builtin.apt:
+    name: "nginx"
+    state: "latest"
+    update_cache: true
+
+- name: "Delete /var/www/html"
+  ansible.builtin.file:
+    path: "/var/www/html"
+    state: "absent"
+
+- name: "Copy nginx config"
+  ansible.builtin.copy:
+    src: "files/nginx.conf"
+    dest: "/etc/nginx/sites-available/php-test.conf"
+    owner: "solovev"
+    group: "solovev"
+    mode: "0644"
+
+- name: "Copy html files"
+  ansible.builtin.copy:
+    src: "files/html"
+    dest: "/var/www/"
+    owner: "solovev"
+    group: "solovev"
+    mode: "0644"

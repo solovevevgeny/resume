@@ -7,8 +7,8 @@
 
     - name: "installing nginx apt"
       ansible.builtin.apt:
-        name: "nginx"
-        state: "latest"
+        name: "nginx=1.31"
+        state: "present"
         update_cache: true
 
     - name: "delete /var/www/html folder"
@@ -28,8 +28,8 @@
     # INSTALLING MYSQL
     - name: "Installing MySQL"
       ansible.builtin.apt:
-        name: "mysql-server"
-        state: "latest"
+        name: "mysql-server=5.0.1"
+        state: "present"
 
     - name: "install pymysql"
       ansible.builtin.apt:

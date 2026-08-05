@@ -1,0 +1,67 @@
+- name: Make application
+  hosts: localhost
+  tasks:
+    - name: "Build docker image"
+      community.docker.docker_image:
+        name: docker_remote
+        tag: 1
+        source: build
+        build:
+          path: .
+
+    - name: "Create dir for image"
+      ansible.builtin.file:
+        path: "./images"
+        state: directory
+
+    - name: "Save image to tar"
+      community.docker.docker_image:
+        name: docker_remote:1
+        archive_path: "./images/docker_remote_1.tar"
+        source: local
+
+- name: "Transfer image to remote host"
+  become: true
+  # become_user: solovev
+  become_method: sudo
+  hosts: remotes
+  roles: 
+    - geerlingguy.docker
+
+
+  tasks:
+    - name: "Create folder"
+      file:
+        path: "~/images"
+        state: "directory"
+        owner: "solovev"
+        group: "solovev"
+        mode: 0644
+
+    - name: "Transfer file"
+      copy:
+        src: "./images/"
+        dest: "/tmp/"
+        owner: "solovev"
+        group: "solovev"
+        mode: 0644
+
+
+    - name: Load images
+      community.docker.docker_image:
+        name: docker_remote:1
+        source: load
+        load_path: /tmp/docker_remote_1.tar
+
+    - name: Run container
+      community.docker.docker_container:
+        name: remote_container
+        image: docker_remote:1
+        state: started
+        ports:
+          - "8081:80"
+          
+    - name: "Delete files"
+      file:
+        path: "~/images/"
+        state: "absent"

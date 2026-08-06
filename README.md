@@ -37,7 +37,7 @@
   - [Docker cleanup](https://github.com/solovevevgeny/resume/blob/main/bash_scripts/docker_cleanup.sh)
   - [Logs rotation](https://github.com/solovevevgeny/resume/blob/main/bash_scripts/rotation_logs.sh)
 
-### [Python devops](https://github.com/solovevevgeny/resume/tree/main/bash_scripts) 
+### [Python devops](https://github.com/solovevevgeny/resume/tree/main/python_scripts)
   - Check ports
   - Check process
   - k8s_OOMKilled_list

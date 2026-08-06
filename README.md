@@ -68,24 +68,31 @@
 
 ### MLOps
   - [Apache Airflow](https://gitlab.com/evgeny.solovev/mlops-project) Docker compose (Airflow, DAGs, Postgresql, Redis)
-    monitoring (Grafana, Prometeus, Loki, Promtail)
-    statsd-exporter
-     
    
 ### Monitoring:
-  - [Grafana](https://gitlab.com/evgeny.solovev/mlops-project)
-  - [Loki](https://gitlab.com/evgeny.solovev/mlops-project)
-  - [Prometeus](https://gitlab.com/evgeny.solovev/mlops-project)
-  - [Promtail](https://gitlab.com/evgeny.solovev/mlops-project)
+  - node-export/kube-state-metrics
+  - [Grafana]
+  - [Loki]
+  - [Prometeus]
+  - [Promtail]
   - Alertmanager
+    
 ### Reverse proxy:
   - nginx
-    - [Nginx as Load balancer (PHP FPM on Instances)](https://github.com/solovevevgeny/resume/tree/main/Proxy/nginx/load_balancer)
+  - [Nginx as Load balancer (PHP FPM on Instances)](https://github.com/solovevevgeny/resume/tree/main/Proxy/nginx/load_balancer)
+   
+### Nginx/HAproxy Balancer:
+  - Round robin
+  - Weight round robin
+  - Lease connections
+  - Sticky sessions (Hash IP)
+      
 ### DBA:
   - MsSQL
   - MySQL
   - Postresql
   - Redis / Memcache
+    
 ### Backend
   - Python: FastAPI
   - PHP: laravel 

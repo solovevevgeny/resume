@@ -105,3 +105,5 @@
     - [Rest Countries (RestAPI Request + Fetch + Filter)](https://github.com/solovevevgeny/resume/tree/main/Frontend/ReactJS/ReactJS_Redux/restcountries)
     - [ReactJS+Redux, ThemeSwitch, Request JSON, parse. Timer polling](https://github.com/solovevevgeny/resume/tree/main/Frontend/ReactJS/ReactJS_Redux/strada-checker)
     - [Coinkeeper front (RESTAPI)](https://github.com/solovevevgeny/resume/tree/main/Frontend/ReactJS/ReactJS_Redux/coinkeeper-front)
+   
+![Slurm Ansible Cert](https://github.com/solovevevgeny/resume/blob/main/slurm-certificate-ansible.png)
